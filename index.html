@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suwardi - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
 
   <!-- Tailwind CSS -->
@@ -26,343 +26,341 @@
 </head>
 
 <body class="bg-white text-secondary font-sans antialiased flex flex-col min-h-screen">
-  <!-- Navbar -->
-  <header id="navbar" class="mb-4">
-    <!-- Professional Navbar - Tailwind CSS -->
-<header class="bg-[#2563EB] text-white shadow-lg">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    
-    <!-- Logo -->
-    <div class="flex items-center space-x-3">
-      <img src="assets/img/logo.png" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1 shadow-md">
-      <span class="text-2xl font-bold tracking-tight">Suwardi</span>
+
+  <!-- Professional Navbar - Tailwind CSS -->
+  <header class="bg-[#2563EB] text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="assets/img/logo.png" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1 shadow-md">
+        <span class="text-2xl font-bold tracking-tight">Suwardi</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8 text-base font-medium">
+        <a href="#tentang-saya" class="hover:text-yellow-300 transition duration-200">Home</a>
+        <a href="#tentang-saya" class="hover:text-yellow-300 transition duration-200">Tentang Saya</a>
+        <a href="#skills" class="hover:text-yellow-300 transition duration-200">Skills</a>
+        <a href="#projects" class="hover:text-yellow-300 transition duration-200">Projects</a>
+        <a href="#contact" class="hover:text-yellow-300 transition duration-200">Contact</a>
+      </nav>
+
+      <!-- Call to Action Button -->
+      <div class="hidden md:block">
+        <a href="#contact"
+          class="border border-yellow-400 text-white font-semibold px-5 py-2 rounded-full shadow hover:bg-yellow-300 transition duration-200">
+          Hire Me
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="hidden md:flex space-x-8 text-base font-medium">
-      <a href="/" class="hover:text-yellow-300 transition duration-200">Home</a>
-      <a href="/about" class="hover:text-yellow-300 transition duration-200">About</a>
-      <a href="/services" class="hover:text-yellow-300 transition duration-200">Services</a>
-      <a href="/projects" class="hover:text-yellow-300 transition duration-200">Projects</a>
-      <a href="/contact" class="hover:text-yellow-300 transition duration-200">Contact</a>
-    </nav>
-
-    <!-- Call to Action Button -->
-    <div class="hidden md:block">
-      <a href="/contact" class="bg-yellow-400 text-[#2563EB] font-semibold px-5 py-2 rounded-full shadow hover:bg-yellow-300 transition duration-200">
-        Hire Me
-      </a>
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden">
+      <nav class="flex flex-col space-y-3 text-base font-medium">
+       <a href="#tentang-saya" class="hover:bg-yellow-300 hover:rounded-md transition duration-200">Home</a>
+        <a href="#tentang-saya" class="hover:bg-yellow-300 hover:rounded-md transition duration-200">Tentang Saya</a>
+        <a href="#skills" class="hover:bg-yellow-300 hover:rounded-md transition duration-200">Skills</a>
+        <a href="#projects" class="hover:bg-yellow-300 hover:rounded-md transition duration-200">Projects</a>
+        <a href="#contact" class="hover:bg-yellow-300 hover:rounded-md transition duration-200">Contact</a>
+        <a href="#contact"
+          class="border border-yellow-400 text-white font-semibold px-5 py-2 rounded-full text-center shadow hover:bg-yellow-300 transition duration-200">
+          Hire Me
+        </a>
+      </nav>
     </div>
-
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="mobile-menu-toggle" class="focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile Menu (Hidden by Default) -->
-  <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden">
-    <nav class="flex flex-col space-y-3 text-base font-medium">
-      <a href="/" class="hover:text-yellow-300 transition duration-200">Home</a>
-      <a href="/about" class="hover:text-yellow-300 transition duration-200">About</a>
-      <a href="/services" class="hover:text-yellow-300 transition duration-200">Services</a>
-      <a href="/projects" class="hover:text-yellow-300 transition duration-200">Projects</a>
-      <a href="/contact" class="hover:text-yellow-300 transition duration-200">Contact</a>
-      <a href="/contact" class="bg-yellow-400 text-[#2563EB] font-semibold px-5 py-2 rounded-full text-center shadow hover:bg-yellow-300 transition duration-200">
-        Hire Me
-      </a>
-    </nav>
-  </div>
-</header>
-
-<!-- Script: Toggle Mobile Menu -->
-<script>
-  const toggleBtn = document.getElementById('mobile-menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
   </header>
 
-  <!-- Main Content -->
-  <main id="main" class="flex-1 w-full px-4 md:px-8 lg:px-16 py-8">
-    <section id="about" class="flex flex-col md:flex-row items-center justify-between gap-8 px-4 py-8">
-  <div class="text-center md:text-left">
-    <h1 class="text-4xl font-bold text-primary mb-4">Halo, Saya Suwardi</h1>
-    <p class="text-lg text-secondary max-w-xl">
-      Seorang Fullstack Web Developer dengan spesialisasi Laravel dan pengalaman
-      dalam membangun aplikasi web yang scalable, cepat, dan user-friendly. Saya 
-      berfokus pada clean code, performa, dan solusi digital yang efektif.
-    </p>
-  </div>
-  <div class="flex items-center justify-center bg-gradient-to-l from-orange-400 via-rose-500 to-pink-500 p-1 rounded-full shadow-xl">
-    <div class="rounded-full overflow-hidden bg-white shadow-inner">
-      <img src="assets/img/foto-profile.png" alt="Hero Image" class="w-64 h-64 object-cover rounded-full">
-    </div>
-  </div>
-</section>
-
-
-<!-- Skills -->
-<section id="skills" class="py-16 px-6 bg-white text-center">
-  <h3 class="text-3xl font-bold mb-10 text-blue-700">Keahlian</h3>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-    
-    <!-- PHP -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fab fa-php text-indigo-600 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">PHP</span>
-        <span class="ml-auto text-sm text-gray-600">90%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
-      </div>
+  <section id="tentang-saya"
+    class="flex flex-col md:flex-row items-center justify-between gap-10 mx-10 px-4 py-16 bg-white dark:bg-gray-900">
+    <div class="text-center md:text-left max-w-xl">
+      <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">Halo, Saya Suwardi</h1>
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        Saya seorang <strong>Fullstack Web Developer</strong> yang fokus pada teknologi <strong>Laravel</strong> dan
+        <strong>Tailwind CSS</strong>. Memiliki pengalaman dalam membangun aplikasi web yang <strong>scalable</strong>,
+        <strong>cepat</strong>, dan <strong>user-friendly</strong>. Saya juga menaruh perhatian khusus pada
+        <strong>clean code</strong>, <strong>performa</strong>, dan <strong>solusi digital efektif</strong>.
+      </p>
     </div>
 
-    <!-- Laravel -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fab fa-laravel text-red-600 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">Laravel</span>
-        <span class="ml-auto text-sm text-gray-600">88%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-red-600 h-2 rounded-full" style="width: 88%"></div>
-      </div>
-    </div>
-
-    <!-- JavaScript -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fab fa-js-square text-yellow-500 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">JavaScript</span>
-        <span class="ml-auto text-sm text-gray-600">80%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-yellow-400 h-2 rounded-full" style="width: 80%"></div>
-      </div>
-    </div>
-
-    <!-- MySQL -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fas fa-database text-green-700 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">MySQL</span>
-        <span class="ml-auto text-sm text-gray-600">85%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-green-700 h-2 rounded-full" style="width: 85%"></div>
-      </div>
-    </div>
-
-    <!-- Tailwind CSS -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fab fa-css3-alt text-blue-500 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">Tailwind CSS</span>
-        <span class="ml-auto text-sm text-gray-600">75%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
-      </div>
-    </div>
-
-    <!-- Vue.js -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fab fa-vuejs text-green-500 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">Vue.js</span>
-        <span class="ml-auto text-sm text-gray-600">70%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
-      </div>
-    </div>
-
-    <!-- Git & GitHub -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fab fa-git-alt text-orange-500 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">Git</span>
-        <span class="ml-auto text-sm text-gray-600">85%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-orange-500 h-2 rounded-full" style="width: 85%"></div>
-      </div>
-    </div>
-
-    <!-- Postman -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fas fa-envelope-open-text text-orange-400 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">Postman</span>
-        <span class="ml-auto text-sm text-gray-600">85%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-orange-400 h-2 rounded-full" style="width: 85%"></div>
-      </div>
-    </div>
-
-    <!-- Flutter -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fab fa-flutter text-sky-400 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">Flutter</span>
-        <span class="ml-auto text-sm text-gray-600">65%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-sky-400 h-2 rounded-full" style="width: 65%"></div>
-      </div>
-    </div>
-
-    <!-- PHPUnit -->
-    <div class="text-left">
-      <div class="flex items-center mb-2">
-        <i class="fas fa-vial text-purple-600 text-2xl mr-2"></i>
-        <span class="text-lg font-medium">PHPUnit</span>
-        <span class="ml-auto text-sm text-gray-600">60%</span>
-      </div>
-      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
-        <div class="bg-purple-600 h-2 rounded-full" style="width: 60%"></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-<div class="flex flex-col md:flex-row-reverse gap-8 mb-16">
-  <!-- Image Carousel Style -->
-  <div class="md:grid md:grid-cols-2 md:gap-4 w-full p-10 flex">
-    <img src="assets/img/project-1-gambar-1.png" alt="Blog 1" class="rounded-lg shadow hover:scale-150 transition duration-200">
-    <img src="assets/img/project-1-gambar-2.png" alt="Blog 2" class="rounded-lg shadow hover:scale-150 transition duration-200">
-    <img src="assets/img/project-1-gambar-3.png" alt="Blog 3" class="rounded-lg shadow hover:scale-150 transition duration-200">
-  </div>
-
-  <!-- Description -->
-  <div class="md:w-1/2">
-    <h4 class="text-xl font-semibold mb-1">Fullstack Developer – Laravel AJAX Blog</h4>
-    <p class="text-gray-500 mb-4">Sep 2024 – Sep 2024</p>
-    <ul class="list-disc list-inside text-gray-700 space-y-1">
-      <li>Blog dinamis dengan AJAX untuk CRUD postingan tanpa reload</li>
-      <li>Admin panel untuk pengelolaan artikel & komentar</li>
-      <li>SMTP Gmail untuk notifikasi pengguna baru</li>
-      <li>Menggunakan Bootstrap + Laravel Blade + jQuery AJAX</li>
-      <li><strong>Hasil:</strong> Pengurangan bounce rate hingga 30%</li>
-    </ul>
-  </div>
-</div>
-
-
-<div class="flex flex-col md:flex-row-reverse gap-8 mb-16">
-  <!-- Image Carousel Style -->
-  <div class="md:grid md:grid-cols-2 md:gap-4 w-full p-10 flex">
-    <img src="assets/img/project-2-gambar-1.png" alt="Pupuk 1" class="rounded-lg shadow hover:scale-150 transition duration-200">
-    <img src="assets/img/project-2-gambar-2.png" alt="Pupuk 2" class="rounded-lg shadow hover:scale-150 transition duration-200">
-    <img src="assets/img/project-2-gambar-3.png" alt="Pupuk 3" class="rounded-lg shadow hover:scale-150 transition duration-200">
-  </div>
-
-  <!-- Description -->
-  <div class="md:w-1/2">
-    <h4 class="text-xl font-semibold mb-1">Sistem Pendukung Keputusan – Subsidi Pupuk</h4>
-    <p class="text-gray-500 mb-4">Sep 2024 – Maret 2025</p>
-    <ul class="list-disc list-inside text-gray-700 space-y-1">
-      <li>Menggunakan metode TOPSIS untuk menentukan penerima pupuk subsidi</li>
-      <li>Dibangun dengan Laravel dan MySQL</li>
-      <li>Form pengisian data kriteria dan laporan hasil ranking</li>
-      <li>Fitur login admin dan cetak PDF</li>
-      <li><strong>Hasil:</strong> Pengambilan keputusan lebih adil dan akurat berdasarkan bobot</li>
-    </ul>
-  </div>
-</div>
-
-<div class="flex flex-col md:flex-row-reverse gap-8 mb-16">
-  <!-- Image Carousel Style -->
-  <div class="md:grid md:grid-cols-2 md:gap-4 w-full p-10 flex">
-    <img src="assets/img/project-3-gambar-1.png" alt="Yummy 1" class="rounded-lg shadow hover:scale-150 transition duration-200">
-    <img src="assets/img/project-3-gambar-2.png" alt="Yummy 2" class="rounded-lg shadow hover:scale-150 transition duration-200">
-    <img src="assets/img/project-3-gambar-3.png" alt="Yummy 3" class="rounded-lg shadow hover:scale-150 transition duration-200">
-  </div>
-
-  <!-- Description -->
-  <div class="md:w-1/2">
-    <h4 class="text-xl font-semibold mb-1">Web  – Yummy Restaurant</h4>
-    <p class="text-gray-500 mb-4">Sep 2024 – Sep 2024</p>
-    <ul class="list-disc list-inside text-gray-700 space-y-1">
-      <li>Template menggunakan Bootstrap 5 template dengan Layout engine</li>
-      <li>Crud </li>
-      <li>otorisasi,authorization,police integrasi sanbox gmail untuk book meja</li>
-      <li>Fitur tampilan menu, reservasi meja, dan galeri restoran</li>
-      <li><strong>Hasil:</strong> UI interaktif dan siap diintegrasikan dengan backend</li>
-    </ul>
-  </div>
-</div>
-
-
-<!-- Contact Section -->
-<section id="contact" class="py-20 px-6 bg-gray-50">
-  <div class="container mx-auto flex flex-col md:flex-row gap-12 items-start">
-    
-    <!-- Form -->
-    <div class="md:w-1/2 w-full bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
-      <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-6">Contact Me</h2>
-      <form id="contact-form" class="space-y-5">
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-          <input type="text" id="name" placeholder="Your Name" required
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition duration-200" />
-        </div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-          <input type="email" id="email" placeholder="you@example.com" required
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition duration-200" />
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-          <textarea id="message" rows="4" placeholder="Write your message..." required
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition duration-200"></textarea>
-        </div>
-        <button type="submit"
-          class="w-full bg-[var(--color-primary)] hover:bg-blue-700  hover:text-white border-blue-700 text-blue-700 border-2 border-blue-700 py-2 rounded-lg font-semibold transition duration-300">
-          Send Message
-        </button>
-      </form>
-
-      <div id="contact-response" class="mt-4 hidden">
-        <p id="contact-response-text" class="text-green-600 font-medium"></p>
-      </div>
-    </div>
-
-    <!-- Live Preview -->
-    <div class="md:w-1/2 w-full">
-      <h3 class="text-xl font-semibold mb-4 text-gray-800">Live Preview</h3>
-      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-4">
-        <div>
-          <span class="text-gray-500 font-medium">Name:</span>
-          <p id="preview-name" class="text-gray-800">-</p>
-        </div>
-        <div>
-          <span class="text-gray-500 font-medium">Email:</span>
-          <p id="preview-email" class="text-gray-800">-</p>
-        </div>
-        <div>
-          <span class="text-gray-500 font-medium">Message:</span>
-          <p id="preview-message" class="text-gray-800">-</p>
+    <div class="flex items-center justify-center">
+      <div class="bg-gradient-to-tr from-orange-400 via-rose-500 to-pink-500 p-1 rounded-full shadow-xl">
+        <div class="rounded-full overflow-hidden bg-white mr-10 dark:bg-gray-800">
+          <img src="assets/img/foto-profile.png" alt="Foto Suwardi" class="w-78 h-78 object-cover rounded-full" />
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 px-6 bg-gray-50 dark:bg-gray-900 text-center">
+    <h3 class="text-3xl md:text-4xl font-bold mb-12 text-blue-700 dark:text-white">Keahlian</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      <!-- Skill Item Template -->
+      <!-- Gunakan struktur seragam untuk semua skill -->
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fab fa-php text-indigo-600 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">PHP</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">90%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fab fa-laravel text-red-600 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">Laravel</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">88%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-red-600 h-2 rounded-full" style="width: 88%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fab fa-js-square text-yellow-500 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">JavaScript</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">80%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-yellow-400 h-2 rounded-full" style="width: 80%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fas fa-database text-green-700 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">MySQL</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">85%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-green-700 h-2 rounded-full" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fab fa-css3-alt text-blue-500 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">Tailwind CSS</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">75%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fab fa-vuejs text-green-500 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">Vue.js</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">70%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fab fa-git-alt text-orange-500 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">Git</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">85%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-orange-500 h-2 rounded-full" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fas fa-envelope-open-text text-orange-400 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">Postman</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">85%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-orange-400 h-2 rounded-full" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fab fa-flutter text-sky-400 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">Flutter</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">65%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-sky-400 h-2 rounded-full" style="width: 65%"></div>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <div class="flex items-center mb-2">
+          <i class="fas fa-vial text-purple-600 text-2xl mr-3"></i>
+          <span class="text-lg font-semibold text-gray-900 dark:text-gray-200">PHPUnit</span>
+          <span class="ml-auto text-sm text-gray-500 dark:text-gray-400">60%</span>
+        </div>
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
+          <div class="bg-purple-600 h-2 rounded-full" style="width: 60%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 bg-white">
+    <div class="container mx-auto space-y-16">
+
+      <!-- Project 1 -->
+      <div class="flex flex-col-reverse md:flex-row items-start gap-10">
+        <!-- Description -->
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="text-xl font-semibold text-gray-800">Fullstack Developer – Laravel AJAX Blog</h4>
+          <p class="text-gray-500">Sep 2024 – Sep 2024</p>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Blog dinamis dengan AJAX untuk CRUD postingan tanpa reload</li>
+            <li>Admin panel untuk pengelolaan artikel & komentar</li>
+            <li>SMTP Gmail untuk notifikasi pengguna baru</li>
+            <li>Menggunakan Bootstrap + Laravel Blade + jQuery AJAX</li>
+            <li><strong>Hasil:</strong> Pengurangan bounce rate hingga 30%</li>
+          </ul>
+        </div>
+
+        <!-- Images -->
+        <div class="grid grid-cols-2 gap-4 md:w-1/2">
+          <img src="assets/img/project-1-gambar-1.png" alt="Blog 1"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200">
+          <img src="assets/img/project-1-gambar-2.png" alt="Blog 2"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200">
+          <img src="assets/img/project-1-gambar-3.png" alt="Blog 3"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200 col-span-2">
+        </div>
+      </div>
+      <hr class="my-8 w-24 mx-auto border-2 border-gray-400 rounded">
+
+      <!-- Project 2 -->
+      <div class="flex flex-col-reverse md:flex-row-reverse items-start gap-10">
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="text-xl font-semibold text-gray-800">POS System – Kasir App Laravel</h4>
+          <p class="text-gray-500">Okt 2024 – Okt 2024</p>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Fitur transaksi, laporan harian, dan manajemen produk</li>
+            <li>Integrasi SweetAlert dan DataTables</li>
+            <li>User management dengan level akses</li>
+            <li><strong>Hasil:</strong> Meningkatkan efisiensi operasional toko hingga 40%</li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-2 gap-4 md:w-1/2">
+          <img src="assets/img/project-2-gambar-1.png" alt="POS 1"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200">
+          <img src="assets/img/project-2-gambar-2.png" alt="POS 2"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200">
+          <img src="assets/img/project-2-gambar-3.png" alt="POS 3"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200 col-span-2">
+        </div>
+      </div>
+      <hr class="my-8 w-24 mx-auto border-2 border-gray-400 rounded">
+
+      <!-- Project 3 -->
+      <div class="flex flex-col-reverse md:flex-row items-start gap-10">
+        <div class="md:w-1/2 space-y-4">
+          <h4 class="text-xl font-semibold text-gray-800">Sistem Informasi Pariwisata – Wisata Sumbar</h4>
+          <p class="text-gray-500">Nov 2024 – Des 2024</p>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Menampilkan daftar destinasi wisata lengkap dengan deskripsi dan gambar</li>
+            <li>Pencarian dinamis dan filter kategori</li>
+            <li>Fitur favorit dan galeri interaktif</li>
+            <li><strong>Hasil:</strong> Meningkatkan pengunjung hingga 25% dalam 2 bulan</li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-2 gap-4 md:w-1/2">
+          <img src="assets/img/project-3-gambar-1.png" alt="Wisata 1"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200">
+          <img src="assets/img/project-3-gambar-2.png" alt="Wisata 2"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200">
+          <img src="assets/img/project-3-gambar-3.png" alt="Wisata 3"
+            class="rounded-lg shadow-md hover:scale-105 transition duration-200 col-span-2">
+        </div>
+      </div>
+      <hr class="my-8 w-24 mx-auto border-2 border-gray-400 rounded">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-gray-50">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Contact Me</h2>
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-2xl p-10 flex flex-col md:flex-row gap-8 items-stretch">
+        <!-- Form Card -->
+        <div class="flex-1 flex flex-col justify-between">
+          <form id="contact-form" action="#" method="POST" class="space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Name</label>
+              <input type="text" id="name" name="name"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                required />
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Email</label>
+              <input type="email" id="email" name="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                required />
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-1">Message</label>
+              <textarea id="message" name="message" rows="5"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                required></textarea>
+            </div>
+            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg transition w-full mt-4">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Preview Card -->
+        <div class="flex-1 flex flex-col justify-between">
+          <div class="bg-gray-50 border border-gray-200 rounded-xl shadow p-8 w-full flex flex-col justify-between h-full">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700">Preview Pesan</h3>
+            <div class="space-y-2 flex-1">
+              <p><strong>Nama:</strong> <span id="preview-name">-</span></p>
+              <p><strong>Email:</strong> <span id="preview-email">-</span></p>
+              <p><strong>Pesan:</strong> <span id="preview-message">-</span></p>
+            </div>
+            <!-- Response Output -->
+            <div id="contact-response" class="hidden mt-6 bg-green-50 border border-green-400 text-green-700 rounded-lg p-4">
+              <span id="contact-response-text"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="mt-16 w-full bg-secondary text-white p-4 text-center">
+    <p class="text-sm">© 2025 Suwardi. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript layout injection -->
+  <!-- <script src="assets/js/layout.js"></script> -->
   <!-- Script -->
   <script>
     const form = document.getElementById('contact-form');
@@ -392,19 +390,15 @@
       responseContainer.classList.remove('hidden');
       responseText.textContent = `Terima kasih atas pesan Anda, ${nameInput.value}!`;
     });
+
+    // Mobile menu toggle script
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuToggle.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
   </script>
-</section>
-
-
-</main>
-
-  <!-- Footer -->
-  <footer id="footer" class="mt-16 w-full bg-secondary text-white p-4 text-center">
-    <p class="text-sm">© 2025 Suwardi. All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript layout injection -->
-  <!-- <script src="assets/js/layout.js"></script> -->
 </body>
 
 </html>
