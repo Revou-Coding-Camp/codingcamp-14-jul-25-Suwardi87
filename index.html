@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suwardi - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',    // Blue-600
+            secondary: '#1E293B',  // Slate-800
+            accent: '#38BDF8',     // Sky-400
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-secondary font-sans antialiased flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <header id="navbar" class="mb-4">
+    <!-- Professional Navbar - Tailwind CSS -->
+<header class="bg-[#2563EB] text-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="assets/img/logo.png" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1 shadow-md">
+      <span class="text-2xl font-bold tracking-tight">Suwardi</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-8 text-base font-medium">
+      <a href="/" class="hover:text-yellow-300 transition duration-200">Home</a>
+      <a href="/about" class="hover:text-yellow-300 transition duration-200">About</a>
+      <a href="/services" class="hover:text-yellow-300 transition duration-200">Services</a>
+      <a href="/projects" class="hover:text-yellow-300 transition duration-200">Projects</a>
+      <a href="/contact" class="hover:text-yellow-300 transition duration-200">Contact</a>
+    </nav>
+
+    <!-- Call to Action Button -->
+    <div class="hidden md:block">
+      <a href="/contact" class="bg-yellow-400 text-[#2563EB] font-semibold px-5 py-2 rounded-full shadow hover:bg-yellow-300 transition duration-200">
+        Hire Me
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button id="mobile-menu-toggle" class="focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (Hidden by Default) -->
+  <div id="mobile-menu" class="md:hidden px-6 pb-4 hidden">
+    <nav class="flex flex-col space-y-3 text-base font-medium">
+      <a href="/" class="hover:text-yellow-300 transition duration-200">Home</a>
+      <a href="/about" class="hover:text-yellow-300 transition duration-200">About</a>
+      <a href="/services" class="hover:text-yellow-300 transition duration-200">Services</a>
+      <a href="/projects" class="hover:text-yellow-300 transition duration-200">Projects</a>
+      <a href="/contact" class="hover:text-yellow-300 transition duration-200">Contact</a>
+      <a href="/contact" class="bg-yellow-400 text-[#2563EB] font-semibold px-5 py-2 rounded-full text-center shadow hover:bg-yellow-300 transition duration-200">
+        Hire Me
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Script: Toggle Mobile Menu -->
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="flex-1 w-full px-4 md:px-8 lg:px-16 py-8">
+    <section id="about" class="flex flex-col md:flex-row items-center justify-between gap-8 px-4 py-8">
+  <div class="text-center md:text-left">
+    <h1 class="text-4xl font-bold text-primary mb-4">Halo, Saya Suwardi</h1>
+    <p class="text-lg text-secondary max-w-xl">
+      Seorang Fullstack Web Developer dengan spesialisasi Laravel dan pengalaman
+      dalam membangun aplikasi web yang scalable, cepat, dan user-friendly. Saya
+      berfokus pada clean code, performa, dan solusi digital yang efektif.
+    </p>
+  </div>
+  <div class="flex items-center justify-center bg-gradient-to-l from-orange-400 via-rose-500 to-pink-500 p-1 rounded-full shadow-xl">
+    <div class="rounded-full overflow-hidden bg-white shadow-inner">
+      <img src="assets/img/foto-profile.png" alt="Hero Image" class="w-64 h-64 object-cover rounded-full">
+    </div>
+  </div>
+</section>
+
+
+<!-- Skills -->
+<section id="skills" class="py-16 px-6 bg-white text-center">
+  <h3 class="text-3xl font-bold mb-10 text-blue-700">Keahlian</h3>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+    
+    <!-- PHP -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fab fa-php text-indigo-600 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">PHP</span>
+        <span class="ml-auto text-sm text-gray-600">90%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+      </div>
+    </div>
+
+    <!-- Laravel -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fab fa-laravel text-red-600 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">Laravel</span>
+        <span class="ml-auto text-sm text-gray-600">88%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-red-600 h-2 rounded-full" style="width: 88%"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fab fa-js-square text-yellow-500 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">JavaScript</span>
+        <span class="ml-auto text-sm text-gray-600">80%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-yellow-400 h-2 rounded-full" style="width: 80%"></div>
+      </div>
+    </div>
+
+    <!-- MySQL -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fas fa-database text-green-700 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">MySQL</span>
+        <span class="ml-auto text-sm text-gray-600">85%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-green-700 h-2 rounded-full" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <!-- Tailwind CSS -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fab fa-css3-alt text-blue-500 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">Tailwind CSS</span>
+        <span class="ml-auto text-sm text-gray-600">75%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+      </div>
+    </div>
+
+    <!-- Vue.js -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fab fa-vuejs text-green-500 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">Vue.js</span>
+        <span class="ml-auto text-sm text-gray-600">70%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
+      </div>
+    </div>
+
+    <!-- Git & GitHub -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fab fa-git-alt text-orange-500 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">Git</span>
+        <span class="ml-auto text-sm text-gray-600">85%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-orange-500 h-2 rounded-full" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <!-- Postman -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fas fa-envelope-open-text text-orange-400 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">Postman</span>
+        <span class="ml-auto text-sm text-gray-600">85%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-orange-400 h-2 rounded-full" style="width: 85%"></div>
+      </div>
+    </div>
+
+    <!-- Flutter -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fab fa-flutter text-sky-400 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">Flutter</span>
+        <span class="ml-auto text-sm text-gray-600">65%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-sky-400 h-2 rounded-full" style="width: 65%"></div>
+      </div>
+    </div>
+
+    <!-- PHPUnit -->
+    <div class="text-left">
+      <div class="flex items-center mb-2">
+        <i class="fas fa-vial text-purple-600 text-2xl mr-2"></i>
+        <span class="text-lg font-medium">PHPUnit</span>
+        <span class="ml-auto text-sm text-gray-600">60%</span>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-purple-600 h-2 rounded-full" style="width: 60%"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<div class="flex flex-col md:flex-row-reverse gap-8 mb-16">
+  <!-- Image Carousel Style -->
+  <div class="md:grid md:grid-cols-2 md:gap-4 w-full p-10 flex">
+    <img src="assets/img/project-1-gambar-1.png" alt="Blog 1" class="rounded-lg shadow hover:scale-150 transition duration-200">
+    <img src="assets/img/project-1-gambar-2.png" alt="Blog 2" class="rounded-lg shadow hover:scale-150 transition duration-200">
+    <img src="assets/img/project-1-gambar-3.png" alt="Blog 3" class="rounded-lg shadow hover:scale-150 transition duration-200">
+  </div>
+
+  <!-- Description -->
+  <div class="md:w-1/2">
+    <h4 class="text-xl font-semibold mb-1">Fullstack Developer – Laravel AJAX Blog</h4>
+    <p class="text-gray-500 mb-4">Sep 2024 – Sep 2024</p>
+    <ul class="list-disc list-inside text-gray-700 space-y-1">
+      <li>Blog dinamis dengan AJAX untuk CRUD postingan tanpa reload</li>
+      <li>Admin panel untuk pengelolaan artikel & komentar</li>
+      <li>SMTP Gmail untuk notifikasi pengguna baru</li>
+      <li>Menggunakan Bootstrap + Laravel Blade + jQuery AJAX</li>
+      <li><strong>Hasil:</strong> Pengurangan bounce rate hingga 30%</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="flex flex-col md:flex-row-reverse gap-8 mb-16">
+  <!-- Image Carousel Style -->
+  <div class="md:grid md:grid-cols-2 md:gap-4 w-full p-10 flex">
+    <img src="assets/img/project-2-gambar-1.png" alt="Pupuk 1" class="rounded-lg shadow hover:scale-150 transition duration-200">
+    <img src="assets/img/project-2-gambar-2.png" alt="Pupuk 2" class="rounded-lg shadow hover:scale-150 transition duration-200">
+    <img src="assets/img/project-2-gambar-3.png" alt="Pupuk 3" class="rounded-lg shadow hover:scale-150 transition duration-200">
+  </div>
+
+  <!-- Description -->
+  <div class="md:w-1/2">
+    <h4 class="text-xl font-semibold mb-1">Sistem Pendukung Keputusan – Subsidi Pupuk</h4>
+    <p class="text-gray-500 mb-4">Sep 2024 – Maret 2025</p>
+    <ul class="list-disc list-inside text-gray-700 space-y-1">
+      <li>Menggunakan metode TOPSIS untuk menentukan penerima pupuk subsidi</li>
+      <li>Dibangun dengan Laravel dan MySQL</li>
+      <li>Form pengisian data kriteria dan laporan hasil ranking</li>
+      <li>Fitur login admin dan cetak PDF</li>
+      <li><strong>Hasil:</strong> Pengambilan keputusan lebih adil dan akurat berdasarkan bobot</li>
+    </ul>
+  </div>
+</div>
+
+<div class="flex flex-col md:flex-row-reverse gap-8 mb-16">
+  <!-- Image Carousel Style -->
+  <div class="md:grid md:grid-cols-2 md:gap-4 w-full p-10 flex">
+    <img src="assets/img/project-3-gambar-1.png" alt="Yummy 1" class="rounded-lg shadow hover:scale-150 transition duration-200">
+    <img src="assets/img/project-3-gambar-2.png" alt="Yummy 2" class="rounded-lg shadow hover:scale-150 transition duration-200">
+    <img src="assets/img/project-3-gambar-3.png" alt="Yummy 3" class="rounded-lg shadow hover:scale-150 transition duration-200">
+  </div>
+
+  <!-- Description -->
+  <div class="md:w-1/2">
+    <h4 class="text-xl font-semibold mb-1">Web  – Yummy Restaurant</h4>
+    <p class="text-gray-500 mb-4">Sep 2024 – Sep 2024</p>
+    <ul class="list-disc list-inside text-gray-700 space-y-1">
+      <li>Template menggunakan Bootstrap 5 template dengan Layout engine</li>
+      <li>Crud </li>
+      <li>otorisasi,authorization,police integrasi sanbox gmail untuk book meja</li>
+      <li>Fitur tampilan menu, reservasi meja, dan galeri restoran</li>
+      <li><strong>Hasil:</strong> UI interaktif dan siap diintegrasikan dengan backend</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-6 bg-gray-50">
+  <div class="container mx-auto flex flex-col md:flex-row gap-12 items-start">
+    
+    <!-- Form -->
+    <div class="md:w-1/2 w-full bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
+      <h2 class="text-3xl font-bold text-[var(--color-primary)] mb-6">Contact Me</h2>
+      <form id="contact-form" class="space-y-5">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition duration-200" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition duration-200" />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea id="message" rows="4" placeholder="Write your message..." required
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition duration-200"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-[var(--color-primary)] hover:bg-blue-700  hover:text-white border-blue-700 text-blue-700 border-2 border-blue-700 py-2 rounded-lg font-semibold transition duration-300">
+          Send Message
+        </button>
+      </form>
+
+      <div id="contact-response" class="mt-4 hidden">
+        <p id="contact-response-text" class="text-green-600 font-medium"></p>
+      </div>
+    </div>
+
+    <!-- Live Preview -->
+    <div class="md:w-1/2 w-full">
+      <h3 class="text-xl font-semibold mb-4 text-gray-800">Live Preview</h3>
+      <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-4">
+        <div>
+          <span class="text-gray-500 font-medium">Name:</span>
+          <p id="preview-name" class="text-gray-800">-</p>
+        </div>
+        <div>
+          <span class="text-gray-500 font-medium">Email:</span>
+          <p id="preview-email" class="text-gray-800">-</p>
+        </div>
+        <div>
+          <span class="text-gray-500 font-medium">Message:</span>
+          <p id="preview-message" class="text-gray-800">-</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const form = document.getElementById('contact-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    const previewName = document.getElementById('preview-name');
+    const previewEmail = document.getElementById('preview-email');
+    const previewMessage = document.getElementById('preview-message');
+
+    const responseText = document.getElementById('contact-response-text');
+    const responseContainer = document.getElementById('contact-response');
+
+    // Live update preview
+    [nameInput, emailInput, messageInput].forEach(input => {
+      input.addEventListener('input', () => {
+        previewName.textContent = nameInput.value || '-';
+        previewEmail.textContent = emailInput.value || '-';
+        previewMessage.textContent = messageInput.value || '-';
+      });
+    });
+
+    // Mock form submit
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      responseContainer.classList.remove('hidden');
+      responseText.textContent = `Terima kasih atas pesan Anda, ${nameInput.value}!`;
+    });
+  </script>
+</section>
+
+
+</main>
+
+  <!-- Footer -->
+  <footer id="footer" class="mt-16 w-full bg-secondary text-white p-4 text-center">
+    <p class="text-sm">© 2025 Suwardi. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript layout injection -->
+  <!-- <script src="assets/js/layout.js"></script> -->
+</body>
+
+</html>
